@@ -1,0 +1,51 @@
+package graphique;
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+public class Hotel extends JPanel {
+	
+	private String[] img;
+	
+	public Hotel(){
+		super();
+		img = new String[7];
+		img[0] = "images/bar.jpg";
+		img[1] = "images/casino.jpg";
+		img[2] = "images/chambre.jpg";
+		img[3] = "images/discotheque.jpg";
+		img[4] = "images/piscine.jpg";
+		img[5] = "images/salleSport.jpg";
+		img[6] = "images/restaurant.jpg";
+		
+		setPreferredSize(new Dimension(750, 100*16));
+		repaint();
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		try {
+			Image img1 = ImageIO.read(new File(this.img[0]));
+			Image img2 = ImageIO.read(new File(this.img[1]));
+			Image img3 = ImageIO.read(new File(this.img[2]));
+			Image img4 = ImageIO.read(new File(this.img[3]));
+			Image img5 = ImageIO.read(new File(this.img[4]));
+			Image img6 = ImageIO.read(new File(this.img[5]));
+			Image img7 = ImageIO.read(new File(this.img[6]));
+			
+			g.drawImage(img7, 0, 1500, this);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

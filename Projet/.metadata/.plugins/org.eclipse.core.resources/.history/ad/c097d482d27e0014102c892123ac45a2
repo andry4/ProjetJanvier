@@ -1,0 +1,17 @@
+/**
+ * Une classe d'hotel
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Chambre extends Etage {
+	public static final float PRIXACHAT = 50000;
+	public static final float PRIXVENTE = 35000;
+	public static final float RECETTEMAX = 5000;
+	public static final float DEPENSE = 1000;
+
+}

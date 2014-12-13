@@ -1,0 +1,148 @@
+/**
+ * Une classe principale
+ */
+package projet;
+
+import java.util.Scanner;
+
+public class Principale {
+	
+	public static void main(String[] args) {
+		// Introduction du jeu
+		System.out.println("Hello !!!!!");
+		System.out.println();
+		
+		//Creation de l'hotel 
+		Hotel hotel = new Hotel("Hilton","Gerrard");
+		Etage [] etage = new Etage[15];
+		System.out.println("Bienvenue dans le jeu");
+		System.out.println("Nom de l'hotel est "+hotel.getNomHotel());
+		System.out.println("Nom du directeur "+hotel.getNomJoueur());
+		System.out.println("Votre solde est de "+hotel.getSolde());
+		System.out.println();
+		
+		// Pourcentage de remplissage de l'hotel
+		TauxRemplissage taux = new TauxRemplissage(); 
+		int remplissage;
+		
+		//Pour avoir les prix
+		Bar bar = new Bar();
+		Casino casino = new Casino();
+		Chambre chambre = new Chambre();
+		Discotheque discotheque = new Discotheque();
+		Piscine piscine = new Piscine();
+		Restaurant restaurant = new Restaurant();
+		SalleSport salleSport = new SalleSport();
+		
+		//Déroulement du jeu
+		int i=0;
+		int choix;
+		Scanner sc = new Scanner(System.in);
+		while(i<15){
+			//Achater un étage
+			System.out.println("Choix d'un achat");
+			System.out.println("1 Bar \t prix : "+bar.PRIXACHAT);
+			System.out.println("2 Casino \t prix : "+casino.PRIXACHAT);
+			System.out.println("3 Chambre \t prix : "+Chambre.PRIXACHAT);
+			System.out.println("4 Discothèque \t prix : "+discotheque.PRIXACHAT);
+			System.out.println("5 Piscine \t prix : "+piscine.PRIXACHAT);
+			System.out.println("6 Restaurant \t prix : "+restaurant.PRIXACHAT);
+			System.out.println("7 Salle de sport \t prix : "+salleSport.PRIXACHAT);
+			//Choix d'achat 
+			choix=sc.nextInt();
+			System.out.println("Votre solde est de "+hotel.getSolde());
+			switch(choix){
+			case 1 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Bar();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				System.out.println(etage[i].PRIXACHAT);
+				break;
+				}
+			case 2 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Casino();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			case 3 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Chambre();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			case 4 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Discotheque();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			case 5 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Piscine();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			case 6 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new Restaurant();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			case 7 : {
+				if(hotel.getSolde()>=etage[i].PRIXACHAT){
+					etage[i] = new SalleSport();
+					hotel.acheterEtage(etage[i].PRIXACHAT);
+					i++;
+				}else System.out.println("Votre solde n'est pas suffisant");
+				break;
+				}
+			default : System.out.println("MAUVAIS CHOIX");
+			}
+			System.out.println();
+			System.out.println(i);
+		}
+	}
+			
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		// Debut achat d'étage
+		
+		etage[0] = new Chambre();
+		System.out.println("Le chambre est de "+etage[0].PRIXACHAT);
+		System.out.println();
+		hotel.acheterEtage(etage[0].PRIXACHAT);
+		System.out.println("Le reste du solde est de "+hotel.getSolde());
+		System.out.println();
+		
+		//Debut du jeu
+		TauxRemplissage taux = new TauxRemplissage(); 
+		int remplissage = taux.taux();
+		System.out.println(remplissage);
+		System.out.println();
+		*/
+
+	
+

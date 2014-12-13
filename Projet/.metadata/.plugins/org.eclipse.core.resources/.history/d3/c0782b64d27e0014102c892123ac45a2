@@ -1,0 +1,23 @@
+/**
+ * Une classe d'hotel
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Etage extends Hotel{
+	protected String nom;
+	public static int niveauEtage = 0;
+	
+	public Etage(){
+		this.nom="inconnue";
+		niveauEtage ++;
+	}
+	public Etage(String name){
+		this.nom=name;
+		niveauEtage ++;
+	}
+}

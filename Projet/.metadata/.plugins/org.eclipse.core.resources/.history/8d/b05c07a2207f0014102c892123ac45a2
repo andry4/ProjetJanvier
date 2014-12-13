@@ -1,0 +1,22 @@
+/**
+ * Une classe pour caractérisé le discothèque
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Discotheque extends Etage {
+	
+	public Discotheque(){
+		this.nom="Discotheque";
+		niveauEtage ++;
+		nbrChambre ++;
+		PRIXACHAT = 30000;
+		PRIXVENTE = 15000;
+		RECETTEMAX = 5000;
+		DEPENSE = 1000;
+	}
+}

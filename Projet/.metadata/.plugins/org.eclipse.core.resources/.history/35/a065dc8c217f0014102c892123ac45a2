@@ -1,0 +1,15 @@
+/**
+ * Une classe pur spécifier chaque étage
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Etage{
+	protected String nom;
+	protected static int niveauEtage = -1;
+	
+}

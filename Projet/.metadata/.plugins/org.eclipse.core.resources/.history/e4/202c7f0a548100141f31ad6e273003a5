@@ -1,0 +1,35 @@
+package graphique;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import projet.Bar;
+import projet.Casino;
+import projet.Chambre;
+import projet.Discotheque;
+import projet.Piscine;
+import projet.Restaurant;
+import projet.SalleSport;
+
+public class PartieGauche extends JPanel {
+	
+	private Dimension dimBouton = new Dimension(100,50);
+	String[] tabEtage = {"Bar", "Casino", "Chambre", "Discothèque", "Piscine", "Restaurant", "Salle de Sport"};
+	JButton[] boutonEtage = new JButton[tabEtage.length];
+	String[] tabPrix = {Float.toString(Bar.getPrixachat()),Float.toString(Casino.getPrixachat())
+						,Float.toString(Chambre.getPrixachat()),Float.toString(Discotheque.getPrixachat())
+						,Float.toString(Piscine.getPrixachat()),Float.toString(Restaurant.getPrixachat())
+						,Float.toString(SalleSport.getPrixachat())};
+	JLabel[] prix = new JLabel[tabEtage.length];
+	
+	private JLabel info = new JLabel("Choix d'etage et son prix");
+	
+	
+	//partiGauche.setPreferredSize(new Dimension(200,550));
+	//partiGauche.setBackground(Color.WHITE);
+
+}

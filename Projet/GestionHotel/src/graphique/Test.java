@@ -1,0 +1,109 @@
+package graphique;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class Test extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+	
+	JLabel image1 = new JLabel( new ImageIcon( "img3.jpg"));
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Test frame = new Test();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Test() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setForeground(Color.DARK_GRAY);
+		contentPane.setBorder(null);
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.GREEN);
+		contentPane.add(panel, BorderLayout.WEST);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.PINK);
+		contentPane.add(panel_1, BorderLayout.SOUTH);
+		
+		JPanel panel_2 = new JPanel();
+		contentPane.add(panel_2, BorderLayout.CENTER);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{image1},
+			},
+			new String[] {
+				"New column"
+			}
+		));
+		panel_2.add(table);
+		table.add(image1);
+	}
+
+}

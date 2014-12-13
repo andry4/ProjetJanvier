@@ -1,0 +1,124 @@
+/**
+ * 
+ */
+package graphique;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.RootPaneContainer;
+
+import projet.Bar;
+import projet.Casino;
+import projet.Chambre;
+import projet.Discotheque;
+import projet.Piscine;
+import projet.Restaurant;
+import projet.SalleSport;
+
+/**
+ * @author Andry, Froiçois, Christophe
+ *
+ */
+public class Fenetre extends JFrame{
+	private JPanel contentPan;
+	private JPanel partiBas;
+	private JPanel partiGauche;
+	private JPanel reste;
+	
+	private JPanel test;
+	
+	JLabel image = new JLabel( new ImageIcon( "img2.jpeg"));
+	JLabel image1 = new JLabel( new ImageIcon( "img3.jpg"));
+	
+	private Dimension dimBouton = new Dimension(100,50);
+	String[] tabEtage = {"Bar", "Casino", "Chambre", "Discothèque", "Piscine", "Restaurant", "Salle de Sport"};
+	JButton[] boutonEtage = new JButton[tabEtage.length];
+	String[] tabPrix = {Float.toString(Bar.getPrixachat()),Float.toString(Casino.getPrixachat())
+						,Float.toString(Chambre.getPrixachat()),Float.toString(Discotheque.getPrixachat())
+						,Float.toString(Piscine.getPrixachat()),Float.toString(Restaurant.getPrixachat())
+						,Float.toString(SalleSport.getPrixachat())};
+	JLabel[] prix = new JLabel[tabEtage.length];
+	
+	private JLabel info = new JLabel("Choix d'etage et son prix");
+	
+	
+	
+	public Fenetre() throws IOException{
+		this.setTitle("Gestion d'Hotel");
+		this.setSize(650, 650);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+		contentPan = new JPanel();
+		partiBas = new JPanel();
+		partiGauche = new JPanel();
+		reste = new JPanel();
+		
+		contentPan.setLayout(new BorderLayout(650, 650));
+		setContentPane(contentPan);
+		
+		contentPan.setLayout(new BorderLayout());
+		
+		contentPan.add(partiBas, BorderLayout.SOUTH);
+		partiBas.setPreferredSize(new Dimension(650,100));
+		partiBas.setBackground(Color.RED);
+		
+		contentPan.add(partiGauche, BorderLayout.WEST);
+		partiGauche.setPreferredSize(new Dimension(200,550));
+		partiGauche.setBackground(Color.WHITE);
+	
+		contentPan.add(reste, BorderLayout.CENTER);
+		reste.add(image);
+		this.getContentPane().add(new JScrollPane(reste));
+		
+		test = new JPanel();
+		reste.add(test,BorderLayout.CENTER);
+		test.add(image1);
+	
+
+		
+	
+		
+		partiGauche.add(info);
+		for(int i = 0; i < tabEtage.length; i++){
+			boutonEtage[i] = new JButton(tabEtage[i]);
+			partiGauche.add(boutonEtage[i]);
+			boutonEtage[i].setPreferredSize(dimBouton);
+			prix[i] = new JLabel(tabPrix[i]);
+			partiGauche.add(prix[i]);
+		}
+		
+	}
+	
+		
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						Fenetre fn = new Fenetre();
+						fn.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+		}
+
+
+}

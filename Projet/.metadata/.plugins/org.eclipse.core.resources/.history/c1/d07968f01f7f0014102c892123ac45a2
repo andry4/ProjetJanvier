@@ -1,0 +1,22 @@
+/**
+ * Une classe pour caractérisé la chambre
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Chambre extends Etage {
+
+	public Chambre(){
+		this.nom="Chambre";
+		Etage.niveauEtage ++;
+		Etage.nbrChambre ++;
+		this.PRIXACHAT = 50000;
+		Etage.PRIXVENTE = 35000;
+		Etage.RECETTEMAX = 5000;
+		Etage.DEPENSE = 1000;
+	}
+}

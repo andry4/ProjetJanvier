@@ -1,0 +1,16 @@
+/**
+ * Une classe pour caractérisé le piscine
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Piscine extends Etage {
+	public static final float PRIXACHAT = 15000;
+	public static final float PRIXVENTE = 5000;
+	public static final float RECETTEMAX = 1000;
+	public static final float DEPENSE = 100;
+}

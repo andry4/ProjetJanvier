@@ -1,0 +1,79 @@
+/**
+ * Une classe d'hotel
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Hotel{
+	private String nom;
+	private int etoile;
+	private Joueur joueur;
+	private int nbrEtage;
+	
+	public Hotel(){
+		this.nom = "inconnue";
+		this.etoile=  0;
+		this.nbrEtage= 0;
+		this.joueur = new Joueur();
+	}
+	public Hotel(String nomHotel, String nomJoueur ){
+		this.nom = nomHotel;
+		this.etoile=  0;
+		this.nbrEtage= 0;
+		this.joueur = new Joueur(nomJoueur);
+	}
+	
+	public void ajouterEtoile(){
+		this.etoile = this.etoile +1;
+	}
+	
+	public void enleverEtoile(){
+		this.etoile = this.etoile +1;
+	}
+	
+	public void ajouterEtage(){
+		this.nbrEtage = this.nbrEtage + 1;
+	}
+	
+	public void enleverEtage(){
+		this.nbrEtage = this.nbrEtage - 1;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public int getEtoile() {
+		return etoile;
+	}
+	public void setEtoile(int etoile) {
+		this.etoile = etoile;
+	}
+	public String getJoueur() {
+		return joueur.getNom();
+	}
+	public void setJoueur(Joueur joueur) {
+		this.joueur = joueur;
+	}
+	public int getNbrEtage() {
+		return nbrEtage;
+	}
+	public void setNbrEtage(int nbrEtage) {
+		this.nbrEtage = nbrEtage;
+	}
+	
+	// Pour avoir les soldes
+	public float getSolde() {
+		return this.joueur.getSolde();
+	}
+	public void setSolde(float solde) {
+		this.joueur.setSolde(solde);
+	}
+	
+}

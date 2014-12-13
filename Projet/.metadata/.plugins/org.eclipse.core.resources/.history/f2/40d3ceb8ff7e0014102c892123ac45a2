@@ -1,0 +1,16 @@
+/**
+ * Une classe pour caractérisé le bar
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Bar extends Etage {
+	public static final float PRIXACHAT = 35000;
+	public static final float PRIXVENTE = 25000;
+	public static final float RECETTEMAX = 3500;
+	public static final float DEPENSE = 500;
+}

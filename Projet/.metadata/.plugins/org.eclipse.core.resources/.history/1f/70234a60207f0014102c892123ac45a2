@@ -1,0 +1,23 @@
+/**
+ * Une classe pour caractérisé le bar
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Bar extends Etage {
+	
+	public Bar(){
+		this.nom="Bar";
+		niveauEtage ++;
+		nbrChambre ++;
+		PRIXACHAT = 35000;
+		PRIXVENTE = 25000;
+		RECETTEMAX = 3500;
+		DEPENSE = 500;
+	}
+	
+}

@@ -1,0 +1,134 @@
+/**
+ * Une classe principale
+ */
+package projet;
+
+import java.util.Scanner;
+
+public class Principale {
+	
+	public static void main(String[] args) {
+		// Introduction du jeu
+		System.out.println("Hello !!!!!");
+		System.out.println();
+		
+		//Creation de l'hotel 
+		Hotel hotel = new Hotel("Hilton","Gerrard");
+		Etage [] etage = new Etage[15];
+		System.out.println("Bienvenue dans le jeu");
+		System.out.println("Nom de l'hotel est "+hotel.getNomHotel());
+		System.out.println("Nom du directeur "+hotel.getNomJoueur());
+		System.out.println("Votre solde est de "+hotel.getSolde());
+		System.out.println();
+		
+		// Pourcentage de remplissage de l'hotel
+		TauxRemplissage taux = new TauxRemplissage(); 
+		int remplissage;
+		
+		//Déroulement du jeu
+		int i=0;
+		int choix; //Choix sur l'étage qui va etre acheter
+		char rep='o'; //Pour caster la reponse
+		String reponse; //Mettre la reponse 
+		Scanner sc = new Scanner(System.in);
+		while(i<15){
+			//Achater un étage
+			System.out.println("Choix d'un achat");
+			System.out.println("1 Bar \t prix : "+Bar.PRIXACHAT);
+			System.out.println("2 Casino \t prix : "+Casino.PRIXACHAT);
+			System.out.println("3 Chambre \t prix : "+Chambre.PRIXACHAT);
+			System.out.println("4 Discothèque \t prix : "+Discotheque.PRIXACHAT);
+			System.out.println("5 Piscine \t prix : "+Piscine.PRIXACHAT);
+			System.out.println("6 Restaurant \t prix : "+Restaurant.PRIXACHAT);
+			System.out.println("7 Salle de sport \t prix : "+SalleSport.PRIXACHAT);
+			while(rep=='o'||rep=='O'){
+				System.out.println("Votre solde est de "+hotel.getSolde());
+				//Choix d'achat 
+				choix=sc.nextInt();
+				switch(choix){
+				case 1 : {
+					if(hotel.getSolde()>=Bar.PRIXACHAT){
+						etage[i] = new Bar();
+						hotel.acheterEtage(Bar.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 2 : {
+					if(hotel.getSolde()>=Casino.PRIXACHAT){
+						etage[i] = new Casino();
+						hotel.acheterEtage(Casino.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 3 : {
+					if(hotel.getSolde()>=Chambre.PRIXACHAT){
+						etage[i] = new Chambre();
+						hotel.acheterEtage(Chambre.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 4 : {
+					if(hotel.getSolde()>=Discotheque.PRIXACHAT){
+						etage[i] = new Discotheque();
+						hotel.acheterEtage(Discotheque.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 5 : {
+					if(hotel.getSolde()>=Piscine.PRIXACHAT){
+						etage[i] = new Piscine();
+						hotel.acheterEtage(Piscine.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 6 : {
+					if(hotel.getSolde()>=Restaurant.PRIXACHAT){
+						etage[i] = new Restaurant();
+						hotel.acheterEtage(Restaurant.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				case 7 : {
+					if(hotel.getSolde()>=SalleSport.PRIXACHAT){
+						etage[i] = new SalleSport();
+						hotel.acheterEtage(SalleSport.PRIXACHAT);
+						i++;
+					}else System.out.println("Votre solde n'est pas suffisant");
+					break;
+					}
+				default : System.out.println("MAUVAIS CHOIX");
+				System.out.println("Vous voulez encore acheter un étage (O si OUI)");
+				reponse =sc.nextLine();
+				rep = reponse.charAt(0);
+				}
+			}
+			System.out.println();
+			System.out.println(i);
+			System.out.println();
+			System.out.println("Nouveau");
+			System.out.println();
+
+		}
+	}
+			
+}
+		
+		
+		
+		/*
+		
+		//Debut du jeu
+		TauxRemplissage taux = new TauxRemplissage(); 
+		int remplissage = taux.taux();
+		System.out.println(remplissage);
+		System.out.println();
+		*/
+
+	
+

@@ -1,0 +1,23 @@
+/**
+ * Une classe pour caractérisé le salle de sport
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class SalleSport extends Etage {
+	
+	public SalleSport(){
+		this.nom="Salle de sport";
+		niveauEtage ++;
+		nbrChambre ++;
+		PRIXACHAT = 10000;
+		PRIXVENTE = 7500;
+		RECETTEMAX = 1000;
+		DEPENSE = 100;
+	}
+	
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="projet.Bar"/>
+<fullyQualifiedTypeName name="projet.Casino"/>
+<fullyQualifiedTypeName name="projet.Chambre"/>
+<fullyQualifiedTypeName name="projet.Discotheque"/>
+<fullyQualifiedTypeName name="projet.Piscine"/>
+<fullyQualifiedTypeName name="projet.Restaurant"/>
+<fullyQualifiedTypeName name="projet.SalleSport"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="graphique.Hotel"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
+</qualifiedTypeNameHistroy>

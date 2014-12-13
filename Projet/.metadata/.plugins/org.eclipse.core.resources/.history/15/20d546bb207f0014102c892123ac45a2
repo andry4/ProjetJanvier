@@ -1,0 +1,23 @@
+/**
+ * Une classe pour caractérisé le piscine
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Piscine extends Etage {
+	
+	public Piscine(){
+		this.nom="Piscine";
+		niveauEtage ++;
+		nbrChambre ++;
+		PRIXACHAT = 15000;
+		PRIXVENTE = 5000;
+		RECETTEMAX = 1000;
+		DEPENSE = 100;
+	}
+	
+}

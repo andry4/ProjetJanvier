@@ -1,0 +1,21 @@
+package graphique;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import projet.Bar;
+import projet.Casino;
+import projet.Chambre;
+import projet.Discotheque;
+import projet.Piscine;
+import projet.Restaurant;
+import projet.SalleSport;
+
+public class PartieGauche extends JPanel {
+	
+	
+}

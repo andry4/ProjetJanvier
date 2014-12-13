@@ -1,0 +1,23 @@
+/**
+ * Une classe pour caractérisé le casino
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Casino extends Etage {
+	
+	public Casino(){
+		this.nom="Casino";
+		niveauEtage ++;
+		nbrChambre ++;
+		PRIXACHAT = 100000;
+		PRIXVENTE = 50000;
+		RECETTEMAX = 15000;
+		DEPENSE = 2500;
+	}
+	
+}

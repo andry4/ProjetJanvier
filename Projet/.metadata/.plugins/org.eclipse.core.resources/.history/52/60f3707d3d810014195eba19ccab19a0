@@ -1,0 +1,45 @@
+package graphique;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class MaFrame extends JFrame {
+	
+	private JPanel contentPan;
+	private PartieBas partieBas;
+	
+	public MaFrame(){
+	
+	this.setTitle("Gestion d'Hotel");
+	//this.setSize(850, 650);
+	this.setLocationRelativeTo(null);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	this.setVisible(true);
+	
+	contentPan = new JPanel();
+	contentPan.setLayout(new BorderLayout(850, 650));
+	partieBas =  new PartieBas("Hilton","Gerrard","110000","65");
+	contentPan.add(partieBas, BorderLayout.SOUTH);
+	partieBas.setPreferredSize(new Dimension(850,100));
+	
+	}
+	
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MaFrame fn = new MaFrame();
+					fn.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+}

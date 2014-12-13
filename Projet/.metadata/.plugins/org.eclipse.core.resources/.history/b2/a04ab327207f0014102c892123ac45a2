@@ -1,0 +1,23 @@
+/**
+ * Une classe pour caractérisé la chambre
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Chambre extends Etage {
+	protected static int nbrChambre = 0;
+	protected static float PRIXACHAT = 50000;
+	protected static float PRIXVENTE = 35000;
+	protected static float RECETTEMAX = 5000;
+	protected static float DEPENSE = 1000;
+
+	public Chambre(){
+		this.nom="Chambre";
+		Etage.niveauEtage ++;
+		Etage.nbrChambre ++;
+	}
+}

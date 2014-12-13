@@ -1,0 +1,39 @@
+package projet;
+
+public class Joueur {
+	
+	private String nom;
+	private float solde;
+	
+	public Joueur(){
+		this.nom ="inconnue";
+		this.solde=100000;
+	}
+	public Joueur(String name){
+		this.nom =name;
+		this.solde=100000;
+	}
+	
+	public void acheterEtage(float achat){
+		this.solde = this.solde - achat;
+	}
+	public void vendreEtage(float vente){
+		this.solde = this.solde + vente;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public float getSolde() {
+		return solde;
+	}
+	public void setSolde(float solde) {
+		this.solde = solde;
+	}
+	
+	
+	
+}

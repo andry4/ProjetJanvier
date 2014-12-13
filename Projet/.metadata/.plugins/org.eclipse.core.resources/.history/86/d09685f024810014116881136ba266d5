@@ -1,0 +1,143 @@
+/**
+ * 
+ */
+package graphique;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.RootPaneContainer;
+
+import projet.Bar;
+import projet.Casino;
+import projet.Chambre;
+import projet.Discotheque;
+import projet.Piscine;
+import projet.Restaurant;
+import projet.SalleSport;
+import javax.swing.JTabbedPane;
+
+/**
+ * @author Andry, Froiçois, Christophe
+ *
+ */
+public class MaFenetreT extends JFrame{
+	private JPanel contentPan;
+	private JPanel partiBas;
+	private JPanel partiGauche;
+	private JPanel reste;
+	
+	private JPanel test;
+	
+	JLabel image = new JLabel( new ImageIcon( "img2.jpeg"));
+	JLabel image1 = new JLabel( new ImageIcon( "img3.jpg"));
+	
+	private Dimension dimBouton = new Dimension(100,50);
+	String[] tabEtage = {"Bar", "Casino", "Chambre", "Discothèque", "Piscine", "Restaurant", "Salle de Sport"};
+	JButton[] boutonEtage = new JButton[tabEtage.length];
+	String[] tabPrix = {Float.toString(Bar.getPrixachat()),Float.toString(Casino.getPrixachat())
+						,Float.toString(Chambre.getPrixachat()),Float.toString(Discotheque.getPrixachat())
+						,Float.toString(Piscine.getPrixachat()),Float.toString(Restaurant.getPrixachat())
+						,Float.toString(SalleSport.getPrixachat())};
+	JLabel[] prix = new JLabel[tabEtage.length];
+	
+	private JLabel info = new JLabel("Choix d'etage et son prix");
+	private JTabbedPane tabbedPane;
+	private JTabbedPane tabbedPane_1;
+	
+	
+	
+	public MaFenetreT() throws IOException{
+		this.setTitle("Gestion d'Hotel");
+		this.setSize(650, 650);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+		contentPan = new JPanel();
+		partiBas = new JPanel();
+		partiGauche = new JPanel();
+		reste = new JPanel();
+		reste.setBorder(null);
+		image.setBounds(6, 1, 427, 510);
+		image.setLabelFor(reste);
+		
+		contentPan.setLayout(new BorderLayout(650, 650));
+		setContentPane(contentPan);
+		
+		contentPan.setLayout(new BorderLayout());
+		
+		contentPan.add(partiBas, BorderLayout.SOUTH);
+		partiBas.setPreferredSize(new Dimension(650,100));
+		partiBas.setBackground(Color.RED);
+		
+		contentPan.add(partiGauche, BorderLayout.WEST);
+		partiGauche.setPreferredSize(new Dimension(200,550));
+		partiGauche.setBackground(Color.WHITE);
+	
+		contentPan.add(reste, BorderLayout.CENTER);
+		reste.setLayout(null);
+		reste.add(image);
+		JScrollPane scrollPane = new JScrollPane(image);
+		this.getContentPane().add(scrollPane);
+		
+		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setToolTipText("dghbrgntnr");
+		tabbedPane.setBackground(Color.BLACK);
+		scrollPane.setRowHeaderView(tabbedPane);
+		
+		tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane_1.setBounds(-2, 5, 5, 5);
+		tabbedPane_1.setToolTipText("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		reste.add(tabbedPane_1);
+		
+		test = new JPanel();
+		test.setBounds(-4, 15, 9, 10);
+		reste.add(test);
+		test.add(image1);
+	
+
+		
+	
+		
+		partiGauche.add(info);
+		for(int i = 0; i < tabEtage.length; i++){
+			boutonEtage[i] = new JButton(tabEtage[i]);
+			partiGauche.add(boutonEtage[i]);
+			boutonEtage[i].setPreferredSize(dimBouton);
+			prix[i] = new JLabel(tabPrix[i]);
+			partiGauche.add(prix[i]);
+		}
+		
+	}
+	
+		
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						MaFenetreT fn = new MaFenetreT();
+						fn.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+		}
+
+
+}

@@ -1,0 +1,20 @@
+/**
+ * Une classe pur spécifier chaque étage
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Etage extends Hotel{
+	protected String nom;
+	public static int nbrChambre = 0;
+	public static int niveauEtage = -1;
+	public static final float PRIXACHAT = 0;
+	public static final float PRIXVENTE = 0;
+	public static final float RECETTEMAX = 0;
+	public static final float DEPENSE = 0;
+	
+}

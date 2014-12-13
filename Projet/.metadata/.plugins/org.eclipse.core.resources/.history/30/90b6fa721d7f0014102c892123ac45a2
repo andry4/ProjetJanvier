@@ -1,0 +1,60 @@
+/**
+ * Une classe pur spécifier chaque étage
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Etage extends Hotel{
+	protected String nom;
+	protected static int nbrChambre = 0;
+	protected static int niveauEtage = -1;
+	protected static float PRIXACHAT = 0;
+	protected static float PRIXVENTE = 0;
+	protected static float RECETTEMAX = 0;
+	protected static float DEPENSE = 0;
+	public String getNom() {
+		return nom;
+	}
+	
+	public static int getNbrChambre() {
+		return nbrChambre;
+	}
+	public static void setNbrChambre(int nbrChambre) {
+		Etage.nbrChambre = nbrChambre;
+	}
+	public static int getNiveauEtage() {
+		return niveauEtage;
+	}
+	public static void setNiveauEtage(int niveauEtage) {
+		Etage.niveauEtage = niveauEtage;
+	}
+	public static float getPRIXACHAT() {
+		return PRIXACHAT;
+	}
+	public static void setPRIXACHAT(float pRIXACHAT) {
+		PRIXACHAT = pRIXACHAT;
+	}
+	public static float getPRIXVENTE() {
+		return PRIXVENTE;
+	}
+	public static void setPRIXVENTE(float pRIXVENTE) {
+		PRIXVENTE = pRIXVENTE;
+	}
+	public static float getRECETTEMAX() {
+		return RECETTEMAX;
+	}
+	public static void setRECETTEMAX(float rECETTEMAX) {
+		RECETTEMAX = rECETTEMAX;
+	}
+	public static float getDEPENSE() {
+		return DEPENSE;
+	}
+	public static void setDEPENSE(float dEPENSE) {
+		DEPENSE = dEPENSE;
+	}
+	
+}

@@ -1,0 +1,22 @@
+package projet;
+
+public class Hotel {
+	private String nom;
+	private int etoile;
+	private Joueur joueur;
+	private int nbrEtage;
+	
+	public Hotel(){
+		this.nom = "inconnue";
+		this.etoile=  0;
+		this.nbrEtage= 0;
+		this.joueur = new Joueur();
+	}
+	public Hotel(String nomHotel, String nomJoueur ){
+		this.nom = nomHotel;
+		this.etoile=  0;
+		this.nbrEtage= 0;
+		this.joueur = new Joueur(nomJoueur);
+	}
+	
+}

@@ -1,0 +1,27 @@
+/**
+ * Une classe pour caractérisé le bar
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Bar extends Etage {
+	protected static boolean existe = false;
+	protected static int nbr = 0;
+	protected static final float PRIXACHAT = 35000;
+	protected static final float PRIXVENTE = 25000;
+	protected static final float RECETTEMAX = 3500;
+	protected static final float DEPENSE = 500;
+	
+	public Bar(){
+		this.nom="Bar";
+		niveauEtage ++;
+		nbr++;
+		existe = true;
+	}
+	
+	
+}

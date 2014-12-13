@@ -1,0 +1,34 @@
+package graphique;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
+public class MaFrame extends JFrame {
+	
+	public MaFrame(){
+	
+	this.setTitle("Gestion d'Hotel");
+	this.setSize(850, 650);
+	this.setLocationRelativeTo(null);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	this.setVisible(true);
+	
+	}
+	
+	private PartieBas partieBas =  PartieBas("Hilton","Gerrard","110000","65")
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MaFrame fn = new MaFrame();
+					fn.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+}

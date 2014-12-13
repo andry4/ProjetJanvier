@@ -1,0 +1,7 @@
+package graphique;
+
+import javax.swing.JFrame;
+
+public class MaFrame extends JFrame {
+
+}

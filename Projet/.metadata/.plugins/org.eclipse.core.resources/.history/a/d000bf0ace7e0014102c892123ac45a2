@@ -1,0 +1,13 @@
+/**
+ * Une classe d'hotel
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Etage extends Hotel {
+
+}

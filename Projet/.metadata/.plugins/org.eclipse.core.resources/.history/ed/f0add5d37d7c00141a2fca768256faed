@@ -1,0 +1,9 @@
+package projet;
+
+public class Hotel {
+	private String nom;
+	private int etoile;
+	private Joueur joueur = new Joueur ();
+	private int nbrEtage;  
+	
+}

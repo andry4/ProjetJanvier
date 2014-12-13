@@ -1,0 +1,7 @@
+package graphique;
+
+import javax.swing.JPanel;
+
+public class Hotel extends JPanel {
+
+}

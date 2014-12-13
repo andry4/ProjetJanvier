@@ -1,0 +1,16 @@
+/**
+ * Une classe pour caractérisé le casino
+ */
+package projet;
+
+/**
+ * @author Andry, François, Christophe
+ *
+ */
+
+public class Casino extends Etage {
+	public static final float PRIXACHAT = 100000;
+	public static final float PRIXVENTE = 50000;
+	public static final float RECETTEMAX = 15000;
+	public static final float DEPENSE = 2500;
+}
